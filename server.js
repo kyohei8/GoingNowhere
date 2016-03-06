@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
 })
 app.use(express.static('.'));
 
-express.get('/', function(req, res){
+app.get('/', function(req, res){
   res.send('it works');
 });
 
