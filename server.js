@@ -13,7 +13,11 @@ app.use(function (req, res, next) {
 
     next()
 })
-app.use(express.static('.'))
+app.use(express.static('.'));
+
+express.get('/', function(req, res){
+  res.send('it works');
+});
 
 app.listen(port, function () {
     console.log('listen on http://localhost:%s', port)
